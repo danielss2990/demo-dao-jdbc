@@ -10,14 +10,11 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Department obj = new Department(1,"Books");
-		Seller seller = new Seller(1, "Daniel", "daniel@gmail.com", new Date(), 21000.0, obj);
 		
 		SellerDao sellerDao = new DaoFactory().createSellerDao();
 		
-		System.out.println(obj);
+		Seller seller = sellerDao.findById(3);
+		
 		System.out.println(seller);
 	}
 
